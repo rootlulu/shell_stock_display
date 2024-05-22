@@ -8,7 +8,7 @@ supports for A-shares and the H-shares market.
 First clone the repo into your disk.
 
 ```bash
-$ git clone git@github.com:rootlulu/shell_stock_display.git
+$ git clone https://github.com/rootlulu/shell_stock_display.git
 ```
 
 then
@@ -37,7 +37,7 @@ sh601012
 ```
 
 ### Sample
-![alt text](image.png)
+![alt text](sample.png)
 
 ## License
 

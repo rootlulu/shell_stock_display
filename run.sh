@@ -24,7 +24,7 @@ getStock() {
 # for each code in $codes, -> getStock
 readStock() {
 	if [ -z $short_scret ]; then
-		result=$(echo 'title="---name----,open,old,cur,top,bottom,\%"')
+		result=$(echo 'title="--------name---------,open,old,cur,top,bottom,\%"')
 	else
 		result=
 	fi
@@ -47,9 +47,9 @@ printStock() {
         idx=2
         }
 		if (isHK) {
-			name=substr("hk"arr[idx],0,16)
+			name=substr("hk"arr[idx],0,20)
 		} else {
-			name=substr(arr[idx],0,16)
+			name=substr(arr[idx],0,20)
 		}
                 open=substr(arr[idx+1],0,7)
         if(open=="0.00"){ #check if is suspended
@@ -76,11 +76,7 @@ printStock() {
                         gap=substr((cur-old)/old*100,0,7)
                 }
         }
-	name_len=length(name)
-	if (name_len <= 3) {
-		name=sprintf("%s  ", name)
-	} 
-	printf("%s\t",name)
+	printf("%-15s\t",name)
 	printf("\033[36m%s\033[0m\t",open)
 	printf("%s\t",old)
 
